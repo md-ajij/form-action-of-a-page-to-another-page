@@ -1,6 +1,6 @@
 # form-action-of-a-page-to-another-page
 
-# To Transfer data from Ajij.js to User.jsv  
+# To Transfer data from Ajij.js to PaySlip.jsv  
 
 ## Ajij.js
 
@@ -8,16 +8,17 @@
 import { useState } from "react";
 import {useRouter] from "nest/router";
 
-const Ajij = ({action = 'User"}) => {
+const Ajij = ({action = "/PaySlip"}) => {
   const router = useRouter();
 
   const [user, setUser] = useState({ name: "", email: "" });
 
   const handleInputFieldChange = (e) => {
 
-    const fieldName = event.target.name;
+    const fieldName = e.target.name;
+    const fieldValue = e.target.value
 
-    setUser({ ...user, [fieldName]: event.target.value });
+    setUser({ ...user, [fieldName]: fieldValue });
 
   };
 
@@ -105,6 +106,18 @@ const Ajij = ({action = 'User"}) => {
   };
 export default Ajij;
 ```  
+# PaySlip.js
+
+```
+import {userouter} from "next/router";
+const PaySlip =() =>{
+  const router = useRouter();
+  const {name,email} = router.query;
+} 
+export default PaySlip;
+```  
+
+
 
 
 
