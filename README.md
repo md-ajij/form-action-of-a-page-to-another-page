@@ -9,7 +9,7 @@
 import { useState } from "react";
 import {useRouter] from "next/router";
 
-const Ajij = ({action = "/PaySlip"}) => {
+const Ajij = ({action = '/PaySlip'}) => {
   const router = useRouter();
 
   const [user, setUser] = useState({ name: "", email: "" });
@@ -21,18 +21,21 @@ const Ajij = ({action = "/PaySlip"}) => {
 
     setUser({ ...user, [fieldName]: fieldValue });
 
-  };
+  };  
+  
+// const {name,email}= user;  
 
   const handleSubmit = (e) => {
 
     e.preventDefault();
 
     router.push({
-      pathname:action,
+      pathname: action,
       query: {
+        // name:name,email:email,
         User:user
       },
-   })
+   });
 
  };
 
