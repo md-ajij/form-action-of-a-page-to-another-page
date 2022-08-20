@@ -1,4 +1,4 @@
-# form-action-of-a-page-to-another-page
+# form-action-of-a-page-to-another-page-in-NEXT.js-React.js
 
 # To Transfer data from Ajij.js to PaySlip.jsv  
 
@@ -6,7 +6,7 @@
 
 ```
 import { useState } from "react";
-import {useRouter] from "nest/router";
+import {useRouter] from "next/router";
 
 const Ajij = ({action = "/PaySlip"}) => {
   const router = useRouter();
@@ -102,14 +102,13 @@ const Ajij = ({action = "/PaySlip"}) => {
     </div>
 
     );
-
-  };
+};
 export default Ajij;
 ```  
 # PaySlip.js
 
 ```
-import {userouter} from "next/router";
+import {useRouter} from "next/router";
 const PaySlip =() =>{
   const router = useRouter();
   const {name,email} = router.query;
