@@ -112,7 +112,13 @@ import {useRouter} from "next/router";
 const PaySlip =() =>{
   const router = useRouter();
   const {name,email} = router.query;
-} 
+  return (
+    <div>
+      <h1>{name}</h1>
+      <h1>{email}</h1>
+    </div>
+  );
+};
 export default PaySlip;
 ```  
 
