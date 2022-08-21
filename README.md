@@ -1,6 +1,6 @@
 # form-action-of-a-page-to-another-page-in-NEXT.js-React.js
 
-# To Transfer data from Ajij.js to PaySlip.jsv  
+# To Transfer data from Ajij.js to PaySlip.js  
 ## Method-1
 
 ## Ajij.js
